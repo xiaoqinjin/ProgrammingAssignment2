@@ -1,15 +1,25 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The function of "makeCacheMatrix" is used for judging whether a matrix is square and invertible; the function of ##"cacheSolve" is used to compute the inverse of the matrix which is given by "makeCacheMatrix" and return its inverse.
 
-## Write a short comment describing this function
 
+## The function of "makeCacheMatrix" is used for judging whether a matrix is square and invertible.
 makeCacheMatrix <- function(x = matrix()) {
-
+  if(nrow(x)==ncol(x)){
+    if (det(x)==0){
+      print("NULL")
+    }else{
+      print(x)
+    }
+  }else{
+    print("NULL")
+  }
 }
 
 
-## Write a short comment describing this function
+## the function of"cacheSolve" is used to compute the inverse of the matrix which is given by "makeCacheMatrix" and 
+## return its inverse.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+  ## Return a matrix that is the inverse of 'x'
+  solvex<-solve(x)
+  print(solvex)
 }
